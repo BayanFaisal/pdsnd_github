@@ -89,7 +89,8 @@ def load_data(city, month, day):
     df = pd.read_csv(CITY_DATA[city])
 
     df.describe()
-
+    df.info()
+    
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
     df['hour'] = df['Start Time'].dt.hour
