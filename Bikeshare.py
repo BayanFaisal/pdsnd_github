@@ -8,8 +8,6 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 
-
-
 def get_filters():
 
     """
@@ -90,6 +88,7 @@ def load_data(city, month, day):
 
     df = pd.read_csv(CITY_DATA[city])
 
+    df.describe()
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
@@ -260,4 +259,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-    
